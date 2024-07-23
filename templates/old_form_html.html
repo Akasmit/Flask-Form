@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Form</title>
+    <!-- Include jQuery and jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- Include any necessary CSS files -->
+    <link href="{{ url_for('static', filename='styles/tailwind.css') }}" rel="stylesheet">
+    <!-- Include Select2 CSS if needed -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+<div class="formbold-main-wrapper">
+  <div class="formbold-form-wrapper">
+    
+    <!-- Change the 'filename' to change the image which is present in static folder -->
+    <img src="{{ url_for('static', filename='form_img.jpg') }}" alt="waves" class="formbold-centered-img mb-4">
+    
+    <form  method="POST">
+      <div class="formbold-form-title">
+        <!-- Enter the form title here in... -->
+      </div>
+
+      <div class="formbold-input-flex">
+        <div>
+          <label for="full_name" class="formbold-form-label">
+            Full Name
+          </label>
+          <input
+            type="text"
+            name="full_name"
+            id="full_name"
+            class="formbold-form-input"
+            value="{{ prefilled_data['Full Name'] }}"
+            required
+          />
+        </div>
+        <div>
+          <label for="job_title" class="formbold-form-label"> Job Title </label>
+          <input
+            type="text"
+            name="job_title"
+            id="job_title"
+            class="formbold-form-input"
+            value="{{ prefilled_data['Job Title'] }}"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="formbold-input-flex">
+        <div>
+          <label for="department" class="formbold-form-label"> Department (AI) </label>
+          <input
+          type="text"
+          name="department"
+          id="department"
+          class="formbold-form-input"
+          value="{{ prefilled_data['Department (AI)'] }}"
+          required
+          />
+        </div>
+        <div>
+          <label for="linkedin_industry" class="formbold-form-label"> LinkedIn Industry </label>
+          <input
+            type="text"
+            name="linkedin_industry"
+            id="linkedin_industry"
+            class="formbold-form-input"
+            value="{{ prefilled_data['Linkedin Industry'] }}"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="formbold-mb-3">
+        <label for="lvl1_industry" class="formbold-form-label">
+          Lvl 1 Industry (AI)
+        </label>
+        <input
+          type="text"
+          name="lvl1_industry"
+          id="lvl1_industry"
+          class="formbold-form-input"
+          value="{{ prefilled_data['Lvl 1 Industry (AI)'] }}"
+        />
+      </div>
+
+      <div class="formbold-mb-3">
+        <label for="lvl2_industry" class="formbold-form-label">
+          Lvl 2 Industry (AI)
+        </label>
+        <input
+          type="text"
+          name="lvl2_industry"
+          id="lvl2_industry"
+          class="formbold-form-input"
+          value="{{ prefilled_data['Lvl 2 Industry (AI)'] }}"
+        />
+      </div>
+
+      <div class="formbold-mb-3">
+        <div>
+          <label for="company_website" class="formbold-form-label">Company Website </label>
+        <textarea
+        type="text"
+        name="company_website"
+        id="company_website" 
+        rows="4" 
+        class=" formbold-large-input"></textarea>
+        
+        <div class="formbold-mb-3">
+          <label for="personal_linkedin_url" class="formbold-form-label">Personal LinkedIn URL </label>
+        <textarea
+        type="text"
+        name="personal_linkedin_url"
+        id="personal_linkedin_url" 
+        rows="4" 
+        class="formbold-form-input formbold-large-input" ></textarea>
+        </div>
+      </div>
+
+      <!-- <div> -->
+        <div class="formbold-mb-3">
+        <label for="additional_information" class="formbold-form-label">Aditional Information </label>
+        <textarea
+        type="text"
+        name="additional_information"
+        id="additional_information" 
+        rows="4" 
+        class="formbold-form-input formbold-large-input" ></textarea>
+        
+        <!-- </div> -->
+        <div>
+          <label for="input4" class="formbold-form-label">Input 4 </label>
+        <textarea 
+        type="text"
+        name="input4"
+        id="input4" 
+        rows="4" 
+        class="formbold-form-input formbold-large-input" ></textarea>
+        </div>
+      </div>
+      </div>
+
+      <div class="formbold-checkbox-wrapper">
+        <label for="supportCheckbox" class="formbold-checkbox-label">
+          <input
+            type="checkbox"
+            id="supportCheckbox"
+            class="formbold-input-checkbox"
+          />
+          <div class="formbold-checkbox-inner">
+            <span class="formbold-opacity-0">
+              <svg
+                width="11"
+                height="8"
+                viewBox="0 0 11 8"
+                fill="none"
+                class="formbold-stroke-current"
+              >
+                <path
+                  d="M10.0915 0.951972L10.0867 0.946075L10.0813 0.940568C9.90076 0.753564 9.61034 0.753146 9.42927 0.939309L4.16201 6.22962L1.58507 3.63469C1.40401 3.44841 1.11351 3.44879 0.932892 3.63584C0.755703 3.81933 0.755703 4.10875 0.932892 4.29224L0.932878 4.29225L0.934851 4.29424L3.58046 6.95832C3.73676 7.11955 3.94983 7.2 4.1473 7.2C4.36196 7.2 4.55963 7.11773 4.71406 6.9584L10.0468 1.60234C10.2436 1.4199 10.2421 1.1339 10.0915 0.951972ZM4.2327 6.30081L4.2317 6.2998C4.23206 6.30015 4.23237 6.30049 4.23269 6.30082L4.2327 6.30081Z"
+                  stroke-width="0.4"
+                ></path>
+              </svg>
+            </span>
+          </div>
+          I agree to the defined
+          <a href="#"> terms, conditions, and policies</a>
+        </label>
+      </div>
+
+        <button class="formbold-btn ">Submit</button>
+      
+    </form>
+  </div>
+</div>
+<!-- Include jQuery and jQuery UI scripts at the end of the body -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+<!-- <script>
+$(function() {
+    var jobTitles = [
+        "Manager",
+        "Developer",
+        "Designer",
+        "Director of Marketing",
+        "Sales Representative",
+        "Engineer",
+        "Project Manager",
+        "Consultant",
+        "Data Scientist",
+        "Product Manager"
+    ];
+    
+    $("#job_title").autocomplete({
+        source: jobTitles
+    });
+
+    var departments = [
+        "Sales",
+        "Engineering",
+        "Marketing",
+        "Human Resources",
+        "Finance",
+        "Customer Service",
+        "IT",
+        "Operations",
+        "Legal",
+        "Product Management"
+    ];
+    
+    $("#department").autocomplete({
+        source: departments
+    });
+
+    var industries = [
+        "Technology",
+        "Healthcare",
+        "Financial Services",
+        "Education",
+        "Retail",
+        "Manufacturing",
+        "Transportation",
+        "Real Estate",
+        "Media",
+        "Energy"
+    ];
+    
+    $("#linkedin_industry").autocomplete({
+        source: industries
+    });
+
+
+});
+</script> -->
+</body>
+</html>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.formbold-mb-3 {
+    margin-bottom: 15px;
+    /* margin-top: 5px; */
+}
+
+.formbold-large-input {
+    text-align: left;
+    margin-bottom: 20px;
+    height: 90px; /* Adjust height for larger input box */
+    line-height: 1.5; /* Adjust line height for better readability */
+    resize: vertical; /* Allows vertical resizing of the textarea */
+    padding: 13px 22px;
+    width: 100%; /* Ensure full width */
+    border-radius: 5px; /* Ensure consistent border radius */
+    border: 1px solid #dde3ec; /* Ensure consistent border */
+    background: #ffffff; /* Ensure consistent background */
+    font-weight: 500; /* Ensure consistent font weight */
+    font-size: 15px; /* Ensure consistent font size */
+    color: #536387; /* Ensure consistent text color */
+    outline: none; /* Ensure no outline */
+    font-family: 'Raleway', sans-serif;
+}
+
+.formbold-relative {
+    position: relative;
+}
+
+.formbold-opacity-0 {
+    opacity: 0;
+}
+
+.formbold-stroke-current {
+    stroke: currentColor;
+}
+
+#supportCheckbox:checked ~ div span {
+    opacity: 1;
+}
+
+.formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+}
+
+.formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%; /* Use full width and let max-width control the size */
+    background: white;
+    padding: 40px;
+}
+
+.formbold-img {
+    margin-bottom: 45px;
+    max-width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.formbold-form-title {
+    margin-bottom: 30px;
+}
+
+.formbold-form-title h2 {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 34px;
+    color: #07074d;
+}
+
+.formbold-form-title p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #536387;
+    margin-top: 12px;
+}
+
+.formbold-input-flex {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.formbold-input-flex > div {
+    width: 100%; /* Make input fields full width in flex container */
+}
+
+.formbold-form-input {
+    text-align: left;
+    width: 100%;
+    padding: 13px 22px;
+    border-radius: 5px;
+    border: 1px solid #dde3ec;
+    background: #ffffff; /* Change background of input box */
+    font-weight: 500;
+    font-size: 15px; /* To Change the Font size...  */
+    color: #536387;  /* To Change the Font color...  */
+    outline: none;
+    resize: none;
+}
+
+.formbold-form-input:focus {
+    border-color: #6a64f1; /* To Change the border color of input box(when we click on the box) */
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05); /* To Change the border color of input box before input */
+}
+
+.formbold-form-label {
+    font-weight: 600;
+    color: #2C2F33; /* change the font color  */
+    font-size: 17px; /* change the font size  */
+    line-height: 24px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.formbold-checkbox-label {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+    line-height: 24px;
+    color: #536387;
+}
+
+.formbold-checkbox-label a {
+    margin-left: 5px;
+    color: #6a64f1;
+}
+
+.formbold-input-checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.formbold-checkbox-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 16px;
+    margin-top: 2px;
+    border: 0.7px solid #dde3ec;
+    border-radius: 3px;
+}
+
+.formbold-btn {
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 14px 25px;
+    border: none;
+    font-weight: 500;
+    background-color: #6a64f1; /* background color of the submit button */
+    color: white; /* font color of the submit button  */
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    background-color: #5752d1; /* Darker shade of blue for hover */
+}
+
+.formbold-centered-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure image is responsive */
+    /* border-radius: 15px; Added property to make the edges rounded */
+}
+
+.ui-autocomplete {
+    font-family: 'Raleway', sans-serif; /* Change the font family as needed */
+    font-size: 15px; /* Change the font size as needed */
+    background-color: #ffffff; /* Background color of dropdown */
+    border: 1px solid #dde3ec; /* Border color of dropdown */
+    border-radius: 5px; /* Border radius for rounded corners */
+    max-height: 200px; /* Maximum height of the dropdown */
+    overflow-y: auto; /* Scrollable if the content exceeds max height */
+    z-index: 1000; /* Ensure dropdown appears above other elements */
+}
+
+.ui-menu-item {
+    padding: 8px 12px; /* Padding for dropdown items */
+    color: #536387; /* Text color for dropdown items */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+}
+
+.ui-menu-item:hover {
+    background-color: #f0f0f0; /* Background color on hover */
+    color: #333; /* Text color on hover */
+}
+
+.formbold-btn-wrapper {
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    margin-top: 25px; /* Optional: Adds some space at the top */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .formbold-input-flex {
+        flex-direction: column;
+    }
+
+    .formbold-form-wrapper {
+        padding: 20px;
+    }
+
+    .formbold-centered-img {
+        width: 100%;
+    }
+
+    .formbold-btn {
+        font-size: 16px;
+        padding: 12px 20px;
+        width: 100%;
+    }
+
+    .formbold-checkbox-label {
+        flex-direction: column;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .formbold-main-wrapper {
+        padding: 24px;
+    }
+
+    .formbold-form-wrapper {
+        padding: 20px;
+    }
+
+    .formbold-form-title h2 {
+        font-size: 28px;
+    }
+
+    .formbold-form-input {
+        font-size: 14px;
+    }
+
+    .formbold-btn {
+        font-size: 14px;
+        padding: 10px 18px;
+        width: 100%;
+    }
+
+    .formbold-checkbox-label {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .formbold-checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+}
+</style>

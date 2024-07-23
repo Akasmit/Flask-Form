@@ -1,0 +1,18 @@
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+        padding: 6px;
+    }
+
+    .submit-btn {
+        padding: 8px 16px;
+    }
+}

@@ -1,0 +1,573 @@
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.formbold-mb-3 {
+    margin-bottom: 15px;
+}
+
+.formbold-large-input {
+    text-align: left;
+    margin-bottom: 20px;
+    height: 90px;
+    line-height: 1.5;
+    resize: vertical;
+    padding: 13px 22px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #dde3ec;
+    background: #ffffff;
+    font-weight: 500;
+    font-size: 15px;
+    color: #536387;
+    outline: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+.formbold-relative {
+    position: relative;
+}
+
+.formbold-opacity-0 {
+    opacity: 0;
+}
+
+.formbold-stroke-current {
+    stroke: currentColor;
+}
+
+#supportCheckbox:checked ~ div span {
+    opacity: 1;
+}
+
+.formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    /* width: 100%; */
+    /* box-sizing: border-box; */
+}
+
+.formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+    background: white;
+    padding: 40px;
+    /* padding-top: 60px; Add top padding to separate from the image */
+    /* box-sizing: border-box; */
+}
+
+.formbold-img {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+.formbold-form-title {
+    margin-bottom: 30px;
+}
+
+.formbold-form-title h2 {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 34px;
+    color: #07074d;
+}
+
+.formbold-form-title p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #536387;
+    margin-top: 12px;
+}
+
+.formbold-input-flex {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.formbold-input-flex > div {
+    flex: 1 1 100%;
+    box-sizing: border-box;
+}
+
+.formbold-form-input {
+    text-align: left;
+    width: 100%;
+    padding: 13px 22px;
+    border-radius: 5px;
+    border: 1px solid #dde3ec;
+    background: #ffffff;
+    font-weight: 500;
+    font-size: 15px;
+    color: #536387;
+    outline: none;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.formbold-form-input:focus {
+    border-color: #161A9A;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold-form-label {
+    font-weight: 600;
+    color: #2C2F33;
+    font-size: 17px;
+    line-height: 24px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.formbold-checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+    line-height: 24px;
+    color: #536387;
+    flex-wrap: wrap;
+}
+
+.formbold-checkbox-label a {
+    margin-left: 5px;
+    color: #6a64f1;
+}
+
+.formbold-input-checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.formbold-checkbox-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 16px;
+    margin-top: 2px;
+    border: 0.7px solid #dde3ec;
+    border-radius: 3px;
+}
+
+.formbold-btn {
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 14px 25px;
+    border: none;
+    font-weight: 500;
+    background-color: #161A9A;
+    color: white;
+    cursor: pointer;
+    margin-top: 2px;
+}
+
+.formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    background-color: #5752d1;
+}
+
+.formbold-centered-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure image is responsive */
+    /* margin-bottom: 50px; Increase bottom margin to separate from form */
+    border-radius: 15px;
+}
+
+.ui-autocomplete {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    background-color: #ffffff;
+    border: 1px solid #dde3ec;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.ui-menu-item {
+    padding: 8px 12px;
+    color: #536387;
+    cursor: pointer;
+}
+
+.ui-menu-item:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.formbold-btn-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5px;
+}
+
+.upper-half {
+    background-color: #002244;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.formbold-logo {
+    width: 200px;
+    height: auto;
+    margin-left: auto;
+}
+
+/* Ensure the flex container aligns items horizontally */
+.flex.items-center.justify-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .formbold-input-flex {
+        flex-direction: column;
+    }
+
+    .formbold-form-wrapper {
+        padding: 20px;
+    }
+
+    .formbold-centered-img {
+        width: 100%;
+    }
+
+    .formbold-btn {
+        font-size: 16px;
+        padding: 12px 20px;
+        width: 100%;
+    }
+
+    .formbold-checkbox-label {
+        flex-direction: column;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .formbold-main-wrapper {
+        padding: 24px;
+    }
+
+    .formbold-form-wrapper {
+        padding: 20px;
+    }
+
+    .formbold-form-title h2 {
+        font-size: 28px;
+    }
+
+    .formbold-form-input {
+        font-size: 14px;
+    }
+
+    .formbold-btn {
+        font-size: 14px;
+        padding: 10px 18px;
+        width: 100%;
+    }
+
+    .formbold-checkbox-label {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .formbold-checkbox-wrapper {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+
+    .flex.items-center.justify-between {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .formbold-logo {
+        margin-top: 20px;
+        width: 100px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Raleway', sans-serif;
+  }
+  .formbold-mb-3 {
+    margin-bottom: 15px;
+    /* margin-top: 5px; */
+  }
+
+
+  .formbold-large-input {
+    text-align: left;
+    margin-bottom: 20px;
+    height: 90px; /* Adjust height for larger input box */
+    line-height: 1.5; /* Adjust line height for better readability */
+    resize: vertical; /* Allows vertical resizing of the textarea */
+    padding: 13px 22px;
+    width: 100%; /* Ensure full width */
+    border-radius: 5px; /* Ensure consistent border radius */
+    border: 1px solid #dde3ec; /* Ensure consistent border */
+    background: #ffffff; /* Ensure consistent background */
+    font-weight: 500; /* Ensure consistent font weight */
+    font-size: 15px; /* Ensure consistent font size */
+    color: #536387; /* Ensure consistent text color */
+    outline: none; /* Ensure no outline */
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+
+
+  .formbold-relative {
+    position: relative;
+  }
+  .formbold-opacity-0 {
+    opacity: 0;
+  }
+  .formbold-stroke-current {
+    stroke: currentColor;
+  }
+  #supportCheckbox:checked ~ div span {
+    opacity: 1;
+  }
+
+  .formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+  }
+
+  .formbold-form-wrapper {    
+    margin: 0 auto;
+    max-width: 800px;
+    width: 60%;                   /* Increase the width of layout */
+    background: white;
+    padding: 40px;
+  }
+
+  .formbold-img {
+    margin-bottom: 45px;
+  }
+
+  .formbold-form-title {
+    margin-bottom: 30px;
+  }
+  .formbold-form-title h2 {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 34px;
+    color: #07074d;
+  }
+  .formbold-form-title p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #536387;
+    margin-top: 12px;
+  }
+
+  .formbold-input-flex {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  .formbold-input-flex > div {
+    width: 100%;
+  }
+
+  /* To change Properties of input text and text box */
+  .formbold-form-input {
+    text-align: left;
+    width: 100%;
+    padding: 13px 22px;
+    border-radius: 5px;
+    border: 1px solid #dde3ec;
+    background: #ffffff;    /* Change background of input box */
+    font-weight: 500;
+    font-size: 15px;    /* To Change the Font size...  */
+    color: #536387;  /* To Change the Font color...  */
+    outline: none;
+    resize: none;
+  }
+  .formbold-form-input:focus {
+    border-color: #6a64f1;            /* To Change the border color of input box(when we click on the box)*/
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);     /* To Change the border color of input box before input */
+  }
+
+  /* Change the properties of Title of Input boxes */
+  .formbold-form-label {
+    font-weight: 600;
+    color: #2C2F33;        /* change the font color  */
+    font-size: 17px;       /* change the font size  */
+    line-height: 24px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .formbold-checkbox-label {
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+    line-height: 24px;
+    color: #536387;
+  }
+  .formbold-checkbox-label a {
+    margin-left: 5px;
+    color: #6a64f1;
+  }
+  .formbold-input-checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  .formbold-checkbox-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 16px;
+    margin-top: 2px;
+    border: 0.7px solid #dde3ec;
+    border-radius: 3px;
+  }
+
+  /* Below you can change the color of submit button */
+  .formbold-btn {
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 14px 25px;
+    border: none;
+    font-weight: 500;
+    background-color: #6a64f1;   /* background color of the submit button */
+    color: white;                /* font color of the submit button  */
+    cursor: pointer;
+    margin-top: 25px;
+  }
+
+  /* Below you can change the hover effect colour of 'Submit' button */
+  .formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    background-color: #5752d1; /* Darker shade of blue for hover */
+  }
+
+  /* Adjust the size of Image imported */
+  .formbold-centered-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+.ui-autocomplete {
+    font-family: 'Raleway', sans-serif; /* Change the font family as needed */
+    font-size: 15px; /* Change the font size as needed */
+    background-color: #ffffff; /* Background color of dropdown */
+    border: 1px solid #dde3ec; /* Border color of dropdown */
+    border-radius: 5px; /* Border radius for rounded corners */
+    max-height: 200px; /* Maximum height of the dropdown */
+    overflow-y: auto; /* Scrollable if the content exceeds max height */
+    z-index: 1000; /* Ensure dropdown appears above other elements */
+}
+
+.ui-menu-item {
+    padding: 8px 12px; /* Padding for dropdown items */
+    color: #536387; /* Text color for dropdown items */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+}
+
+.ui-menu-item:hover {
+    background-color: #f0f0f0; /* Background color on hover */
+    color: #333; /* Text color on hover */
+}
+.formbold-btn-wrapper {
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    margin-top: 25px; /* Optional: Adds some space at the top */
+}
