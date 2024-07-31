@@ -1,12 +1,12 @@
 from flask import Flask, request, redirect, url_for, render_template
 from send_form_data import store_form_data
-
-app = Flask(__name__)
+# from app import app
 
 # @app.route('/')
 # def index():
 #     return render_template('newForm.html')  # Ensure this matches your HTML file name
 
+app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])
 def submit_form():
     if request.method == 'POST':

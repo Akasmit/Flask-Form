@@ -40,7 +40,7 @@
           <div>
             <label for="job_title" class="formbold-form-label"> Job Title </label>
             <input type="text" name="job_title" id="job_title" class="formbold-form-input"
-              value=" " required />
+              value="" required />
           </div>
         </div>
 
@@ -74,22 +74,22 @@
         </div>
         <div class="formbold-mb-3">
           <div>
-            <label for="input1" class="formbold-form-label">What pain points do you have? </label>
-            <textarea type="text" name="input1" id="long_input1" rows="4"
+            <label for="long_input1" class="formbold-form-label">What pain points do you have? </label>
+            <textarea type="text" name="long_input1" id="long_input1" rows="4"
               class="formbold-form-input formbold-large-input"></textarea>
             <div class="formbold-mb-3">
-              <label for="input2" class="formbold-form-label">What tasks do you do the most of?</label>
-              <textarea type="text" name="input2" id="long_input2" 
+              <label for="long_input2" class="formbold-form-label">What tasks do you do the most of?</label>
+              <textarea type="text" name="long_input2" id="long_input2" 
         rows=" 4" class="formbold-form-input formbold-large-input"></textarea>
             </div>
           </div>
-          <div class="formbold-mb-3"><label for="input3" class="formbold-form-label">What are your most used software
+          <div class="formbold-mb-3"><label for="long_input3" class="formbold-form-label">What are your most used software
               tools?</label>
-            <textarea type="text" name="input3" id="long_input3" 
+            <textarea type="text" name="long_input3" id="long_input3" 
         rows=" 4" class="formbold-form-input formbold-large-input"></textarea>
             <div>
-              <label for="input4" class="formbold-form-label">What AI technologies interest you the most?</label>
-              <textarea type="text" name="input4" id="long_input4" rows="4"
+              <label for="long_input4" class="formbold-form-label">What AI technologies interest you the most?</label>
+              <textarea type="text" name="long_input4" id="long_input4" rows="4"
                 class="formbold-form-input formbold-large-input"></textarea>
             </div>
           </div>
@@ -280,13 +280,13 @@ body {
     align-items: center;
     justify-content: center;
     padding: 48px;
-    width: 100%;
+    width: auto;
     box-sizing: border-box;
 }
 
 .formbold-form-wrapper {
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 700px;
     width: 100%;
     background: white;
     padding: 40px;
@@ -335,7 +335,7 @@ body {
     border: 1px solid #dde3ec;
     background: #ffffff;
     font-weight: 500;
-    font-size: 22px;
+    font-size: 18px;
     color: #536387;
     outline: none;
     resize: none;
@@ -351,7 +351,7 @@ body {
 .formbold-form-label {
     font-weight: 600;
     color: #2C2F33;
-    font-size: 26px;
+    font-size: 20px;
     line-height: 24px;
     display: block;
     margin-bottom: 10px;
@@ -485,7 +485,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    max-width: 1000px;
+    max-width: 700px;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
@@ -519,6 +519,7 @@ body {
     justify-self: start;
 }
 
+
 @media (max-width: 768px) {
     .formbold-input-flex {
         flex-direction: column;
@@ -535,6 +536,13 @@ body {
     .formbold-btn {
         font-size: 20px;
         padding: 12px 20px;
+        width: 100%;
+        margin-top: 28%;
+    }
+
+    .formbold-btn {
+        font-size: 14px;
+        padding: 10px 18px;
         width: 100%;
     }
 
@@ -558,12 +566,6 @@ body {
 
     .formbold-form-input {
         font-size: 14px;
-    }
-
-    .formbold-btn {
-        font-size: 14px;
-        padding: 10px 18px;
-        width: 100%;
     }
 
     .formbold-checkbox-label {
@@ -605,7 +607,7 @@ body {
             }
 
             .formbold-form-input {
-                font-size: 12px;
+                font-size: 14px;
             }
 
             .formbold-btn {
@@ -613,6 +615,12 @@ body {
                 padding: 8px 15px;
                 margin-top: 30px;
             }
+
+            /* .formbold-btn {
+                font-size: 14px;
+                padding: 10px 18px;
+                width: 100%;
+            } */
 
             .formbold-checkbox-label {
                 font-size: 10px;
@@ -622,13 +630,21 @@ body {
             .logo {
                 grid-row: 3 / span 1;
                 grid-column: 1 / span 1;
-                margin-top: 0;
+                margin-top: -5% !important;
                 margin-right: 20px; 
             }
 
-            .container {
+            /* .container {
                 grid-template-columns: 1fr;
                 grid-template-rows: auto auto auto;
+            } */
+            .container {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
             }
         }
 </style>
